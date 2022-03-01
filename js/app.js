@@ -29,13 +29,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-let multOfTheTwo = a * b; // line 0
-let message = `The product of ${a} and ${b} is ${multOfTheTwo}.` // line 1
-return [multOfTheTwo, message];
+  let multOfTheTwo = a * b; // line 0
+  let message = `The product of ${a} and ${b} is ${multOfTheTwo}.` // line 1
+  return [multOfTheTwo, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -52,15 +52,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let sumOfTheThree = sum(sum(a,b)[0],sum(0, c)[0])[0];// line 0 4 + 7 + 5 === 16
-let multOfTheThree = multiply(multiply(a,b)[0], c)[0];// line 1 4 * 7 * 5 === 140
-let message1 = `${a} and ${b} and ${c} sum to ${sumOfTheThree}.`;// line 2 === '4 and 7 and 5 sum to 16.'
-let message2 = `The product of ${a} and ${b} and ${c} is ${multOfTheThree}.`;// line 3 === 'The product of 4 and 7 and 5 is 140.'
-return [sumOfTheThree, multOfTheThree, message1, message2];
+  let sumOfTheThree = sum(sum(a, b)[0], sum(0, c)[0])[0];// line 0 4 + 7 + 5 === 16
+  let multOfTheThree = multiply(multiply(a, b)[0], c)[0];// line 1 4 * 7 * 5 === 140
+  let message1 = `${a} and ${b} and ${c} sum to ${sumOfTheThree}.`;// line 2 === '4 and 7 and 5 sum to 16.'
+  let message2 = `The product of ${a} and ${b} and ${c} is ${multOfTheThree}.`;// line 3 === 'The product of 4 and 7 and 5 is 140.'
+  return [sumOfTheThree, multOfTheThree, message1, message2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -78,9 +78,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-let sumOfArray = sum(sum(testArray[0],testArray[1])[0], testArray[2])[0];
-let message = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumOfArray} is their sum.`;
-return [sumOfArray, message];
+  let sumOfArray = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0];
+  let message = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumOfArray} is their sum.`;
+  return [sumOfArray, message];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -101,9 +101,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-let multOfArray = multiply(multiply(testArray[0],testArray[1])[0],testArray[2])[0];
-let message = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multOfArray}.`;
-return [multOfArray, message];
+  let multOfArray = multiply(multiply(testArray[0], testArray[1])[0], testArray[2])[0];
+  let message = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multOfArray}.`;
+  return [multOfArray, message];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -128,13 +128,13 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-let dynamo = 1
-for(let i = 0; i < testDynamicArray.length; i++){
-  dynamo = multiply(testDynamicArray[i], dynamo)[0];
-}
+  let dynamo = 1
+  for (let i = 0; i < testDynamicArray.length; i++) {
+    dynamo = multiply(testDynamicArray[i], dynamo)[0];
+  }
   let message = `The numbers ${testDynamicArray} have a product of ${dynamo}.`;
   return [dynamo, message];
 }
